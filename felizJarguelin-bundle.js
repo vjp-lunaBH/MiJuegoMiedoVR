@@ -7779,23 +7779,6 @@ __publicField(MovimientoLuz, "Properties", {
   targets: Property4.array(Property4.record(TargetRef2))
 });
 
-// js/sonidoDelay.js
-import { Component as Component32, Property as Property5 } from "@wonderlandengine/api";
-var MovimientoDelay2 = class extends Component32 {
-  start() {
-    let timer = setTimeout(() => {
-      this.audioSource = this.object.getComponent("audio-source");
-      audioSource.play();
-    }, tiempoDelay);
-  }
-  update(dt) {
-  }
-};
-__publicField(MovimientoDelay2, "TypeName", "sonidodelay");
-__publicField(MovimientoDelay2, "Properties", {
-  tiempoDelay: Property5.float()
-});
-
 // js/index.js
 function js_default(engine) {
   engine.registerComponent(AudioListener);
@@ -7811,7 +7794,6 @@ function js_default(engine) {
   engine.registerComponent(LucesIntensidad);
   engine.registerComponent(MovimientoDelay);
   engine.registerComponent(MovimientoLuz);
-  engine.registerComponent(MovimientoDelay2);
 }
 export {
   js_default as default
